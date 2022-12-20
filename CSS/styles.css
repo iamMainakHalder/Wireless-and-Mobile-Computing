@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+}
+
+.scroll-tracker {
+  width: 100%;
+  background-color: #ffffff;
+  height: 2px;
+  position: fixed;
+  z-index: 3;
+  transform-origin: left;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  transition: top 250ms;
+  font-family: 'Nova Mono', monospace;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
+nav img{
+  height: 30px;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  background-color: #ffffff;
+  margin-top: 5px;
+  height: 1px;
+  width: 0;
+  transition: ease-in-out 250ms;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+#home {
+  width: 100%;
+}
+
+#home img {
+  filter: brightness(30%);
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1),
+    transparent);
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1),
+    transparent);
+}
+
+#home h1 {
+  position: relative;
+  display: grid;
+  place-content: center;
+  bottom: 500px;
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 60px;
+  text-shadow: 10px 10px 10px #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+#home h1::after {
+  content: '';
+  display: block;
+  background-color: #ffffff;
+  height: 1px;
+  width: 0;
+  transition: ease-in-out 300ms;
+}
+
+#home h1:hover::after {
+  width: 100%;
+}
+
+.odd-sec {
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+  color: #111111;
+}
+
+.odd-sec img, .even-sec img {
+  width: 500px;
+  transition: ease-in-out 250ms;
+}
+
+.odd-sec img {
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.odd-sec img:hover, .even-sec img:hover {
+  border-radius: 10px;
+}
+
+.even-sec {
+  background-image: linear-gradient(to bottom, #333333, #000000);
+  color: #ffffff;
+}
+
+.container {
+  padding: 25px;
+}
+
+td {
+  padding: 100px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #111111;
+}
+
+td h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.odd-sec td h1::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #111111;
+  transition: ease-in-out 250ms;
+}
+
+.odd-sec td h1:hover::after {
+  width: 100%;
+}
+
+.even-sec td h1::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #ffffff;
+  transition: ease-in-out 250ms;
+}
+
+.even-sec td h1:hover::after {
+  width: 100%;
+}
+
+td p {
+  font-size: 15px;
+}
+
+footer {
+  background-image: linear-gradient(to bottom, #333333, #000000);
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+footer h1 {
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+footer i {
+  font-size: 30px;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-links {
+  text-align: center;
+}
+
+i::after {
+  content: '';
+  display: block;
+  background-color: #ffffff;
+  width: 0;
+  height: 1px;
+  transition: ease-in-out 250ms;
+  margin-top: 10px;
+}
+
+i:hover::after {
+  width: 100%;
+}
+
+form {
+  display: grid;
+  place-content: center;
+}
+
+input, textarea, select, button {
+  font-family: 'Nova Mono', monospace;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom right, #ffffff, #cccccc);
+  border: solid 2px #333333;
+  width: 500px;
+  transition: ease-in-out 250ms;
+  text-align: center;
+}
